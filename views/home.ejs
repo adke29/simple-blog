@@ -1,0 +1,28 @@
+<%-include("header")-%>
+
+<h1>Hello there! Welcome to my blog</h1>
+<p><%= homeContent %></p>
+
+<div class="container">
+    <div class="row">
+        <%for(const key in allPosts){%>
+            <div class="col col-md-4">
+                <h2><%= key %></h2>
+                <p><%= allPosts[key].substring(0,300)%> ... </p>
+                <a href=<%="/posts/" + key%>>Read More</a>
+                
+            </div>
+        <%}%>
+        </div>
+    </div>
+</div>
+
+<a href="/compose">
+    <div class="floating-container">
+        <div class="floating-button">+</div>
+    </div>
+</a>
+
+
+
+<%-include("footer")-%>
