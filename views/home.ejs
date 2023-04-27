@@ -3,17 +3,18 @@
 <h1>Hello there! Welcome to my blog</h1>
 <p><%= homeContent %></p>
 
-<div class="container">
+<div class="container ">
     <div class="row">
-        <%for(const key in allPosts){%>
-            <div class="col col-md-4">
-                <h2><%= key %></h2>
-                <p><%= allPosts[key].substring(0,300)%> ... </p>
-                <a href=<%="/posts/" + key%>>Read More</a>
-                
+        <%allPosts.forEach(post => {%>
+            <div class="col col-md-4 col-sm-6">
+                <div class="float-end">
+                    <a href="<%='/delete/' + post._id.toString()%>"><span class="material-symbols-outlined">delete</span></a>
+                </div>
+                <h2><%= post.title %></h2>
+                <p ><%= post.content.substring(0,200)%> ... </p>
+                <a href=<%="/posts/" + post._id.toString()%>>Read More</a>
             </div>
-        <%}%>
-        </div>
+        <%})%>
     </div>
 </div>
 

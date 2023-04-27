@@ -1,6 +1,17 @@
+html{
+  height: 100%;
+}
+body{
+  height:100%;
+}
+p{
+  overflow-wrap: break-word;
+}
+a{
+  text-decoration: none;
+}
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 20px 70px;
 }
 .navbar {
     padding-top: 15px;
@@ -11,6 +22,7 @@
     font-size: 12px;
     letter-spacing: 5px;
 }
+
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
 }
@@ -19,20 +31,6 @@
 	padding-bottom: 60px;
 }
 
-.footer {
-	position: fixed;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
-}
-
-.footer p {
-	margin-top: 25px;
-	font-size: 12px;
-  color: #fff;
-}
 
 
 
@@ -42,7 +40,7 @@
   height: 100px;
   bottom: 0;
   right: 0;
-  margin: 0px 25px 90px;
+  margin: 0px 5px 40px;
 }
 
 .floating-container:hover .floating-button {
@@ -64,7 +62,7 @@
   right: 0;
   margin: auto;
   color: white;
-  line-height: 65px;
+  line-height: 60px;
   text-align: center;
   font-size: 23px;
   z-index: 100;
@@ -72,4 +70,21 @@
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+
+.col{
+  padding: 50px;
+}
+
+.container h1{
+  margin: 50px 0px;
+}
+
+.float-end{
+  margin-top: 10px;
+
+}
+.float-end span{
+  color: black;
 }
