@@ -1,6 +1,6 @@
 <%-include("header")-%>
 
-<h1>Hello there! Welcome to my blog</h1>
+<h1>Hello there! Welcome to my Blog</h1>
 <p><%= homeContent %></p>
 
 <div class="container ">
@@ -10,7 +10,9 @@
                 <div class="float-end">
                     <a href="<%='/delete/' + post._id.toString()%>"><span class="material-symbols-outlined">delete</span></a>
                 </div>
-                <h2><%= post.title %></h2>
+                <h2><%= post.title.substring(0,50) %><%if(post.title.length>50){%>
+                   <%="..."%> 
+                <%}%></h2>
                 <p ><%= post.content.substring(0,200)%> ... </p>
                 <a href=<%="/posts/" + post._id.toString()%>>Read More</a>
             </div>
